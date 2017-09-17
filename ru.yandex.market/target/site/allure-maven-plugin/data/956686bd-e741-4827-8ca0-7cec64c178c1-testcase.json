@@ -1,0 +1,46 @@
+{
+  "uid" : "956686bd-e741-4827-8ca0-7cec64c178c1",
+  "name" : "market",
+  "title" : "Market",
+  "time" : {
+    "start" : 1505675727307,
+    "stop" : 1505675897828,
+    "duration" : 170521
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 1
+  },
+  "failure" : null,
+  "description" : {
+    "value" : "Element search",
+    "type" : "TEXT"
+  },
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "steps" : [ {
+    "name" : "market",
+    "title" : "Market",
+    "time" : {
+      "start" : 1505675727339,
+      "stop" : 1505675897823,
+      "duration" : 170484
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Without feature"
+  }, {
+    "name" : "story",
+    "value" : "Without story"
+  } ],
+  "parameters" : [ ]
+}

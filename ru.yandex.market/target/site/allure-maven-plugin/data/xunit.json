@@ -1,0 +1,40 @@
+{
+  "time" : {
+    "start" : 1505675727301,
+    "stop" : 1505675898989,
+    "duration" : 171688
+  },
+  "testSuites" : [ {
+    "uid" : "dfe2b421-23af-40da-9343-8f8ddeaa8fbe",
+    "name" : "ru.yandex.market.YandexTest",
+    "title" : "Test Yandex.Market",
+    "time" : {
+      "start" : 1505675727301,
+      "stop" : 1505675898989,
+      "duration" : 171688
+    },
+    "statistic" : {
+      "total" : 1,
+      "passed" : 1,
+      "skipped" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : {
+      "value" : "Search for the second item among the list of Acer products",
+      "type" : "TEXT"
+    },
+    "testCases" : [ {
+      "uid" : "956686bd-e741-4827-8ca0-7cec64c178c1",
+      "name" : "market",
+      "title" : "Market",
+      "time" : {
+        "start" : 1505675727307,
+        "stop" : 1505675897828,
+        "duration" : 170521
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

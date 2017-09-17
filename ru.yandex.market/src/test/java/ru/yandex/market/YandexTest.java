@@ -23,20 +23,6 @@ public class YandexTest {
 
     private static WebDriver driver;
 
-    public String secondElement;
-    public void setSecondElement(String secondElement)
-    {
-        this.secondElement = secondElement;
-    }
-
-    public String getSecondElement()
-    {
-        return this.secondElement;
-    }
-
-    public String name;
-
-
     @Title("The class containing the settings")
     @Description("Driver location, driver location, opening the browser to the whole window, start page")
     @BeforeClass
@@ -50,14 +36,14 @@ public class YandexTest {
 
     @Test
     @Step
-    @Title("Search for the required item")
+    @Title("Market")
     @Description("Element search")
-    public void search() {
+    public void market() {
         WebDriverWait waitMarket = new WebDriverWait(driver, 10);
         WebElement market = waitMarket.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[data-id*='market']")));
         market.click();
 
-        WebDriverWait waitPc = new WebDriverWait(driver, 10);
+        WebDriverWait waitPc = new WebDriverWait(driver, 20);
         WebElement pc = waitPc.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*='54425']")));
         pc.click();
 
@@ -79,46 +65,22 @@ public class YandexTest {
 
         WebElement clickOnButton = driver.findElement(By.cssSelector("div.n-filter-panel-aside__controls button"));
         clickOnButton.click();
-    }
 
-    @Test
-    @Step
-    @Title("Search second element")
-    @Description("Second Element")
-    public void saveNameSecondElement(){
         WebDriverWait nameSecondOne = new WebDriverWait(driver, 10);
-        WebElement searchNameElement = nameSecondOne.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.n-snippet-list.n-snippet-list_type_vertical.island.metrika.i-bem.snippet-list_js_inited.metrika_js_inited [data-id*='model']:nth-child(2) span.snippet-card__header-text")));
-        setSecondElement(searchNameElement.getText());
-    }
+        WebElement searchNameElement2 = nameSecondOne.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.n-snippet-list.n-snippet-list_type_vertical.island.metrika.i-bem.snippet-list_js_inited.metrika_js_inited [data-id*='model']:nth-child(2) span.snippet-card__header-text")));
+        String secondElement = searchNameElement2.getText();
 
-    @Test
-    @Step
-    @Title("Search second element")
-    @Description("search for the second item in the search bar")
-    public void SearchSecondElement(){
         WebElement marketsearch = driver.findElement(By.cssSelector("span#market-search input#header-search"));
         marketsearch.click();
         marketsearch.sendKeys(secondElement);
 
         WebElement searchButton = driver.findElement(By.cssSelector("span.search2__button button"));
         searchButton.click();
-    }
 
-    @Test
-    @Step
-    @Title("Search and save name element")
-    @Description("Name found element")
-    public void SearchSecondElementForSave(){
         WebDriverWait nameSecond = new WebDriverWait(driver, 10);
         WebElement searchNameElement = nameSecond.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.n-product-title h1")));
-        getSecondElement();
-    }
+        String name = searchNameElement.getText();
 
-    @Test
-    @Step
-    @Title("Comparison")
-    @Description("Comparison")
-    public void ComparisonElement(){
         Assert.assertEquals(secondElement, name);
     }
 
